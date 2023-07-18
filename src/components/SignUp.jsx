@@ -16,7 +16,7 @@ const SignUp = () => {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${process.env.REACT_APP_BASE_URL}v1/user/signup`, { ...userInfo });
+            await axios.post(`https://typingtest.onrender.com/v1/user/signup`, { ...userInfo });
             toast("SignUp Successfully")
             navigate("/signin");
 
