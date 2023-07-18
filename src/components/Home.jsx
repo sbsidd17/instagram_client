@@ -43,20 +43,32 @@ const Home = () => {
         Logout
       </button>
       <div className="flex justify-center items-center h-screen">
-        <div className="shadow-gray-400 shadow-2xl w-[420px] px-8 py-5 flex flex-col justify-center items-center">
-          <img className="rounded-full w-52 h-52" src="https://graph.org/file/b66211e60ca697e22b76e.jpg" alt="" />
-          <p className="text-2xl font-bold mt-2 text-black">
+        <div className="shadow-gray-400 shadow-2xl w-[420px] px-8 gap-5 flex flex-col">
+          <div className="flex "><p className="text-2xl font-bold mt-2 text-black">
             @{userInfo.username}
+          </p></div>
+          <div className="flex gap-10">
+          <img className="rounded-full w-20 h-20" src="https://graph.org/file/b66211e60ca697e22b76e.jpg" alt="" />
+          <div className="flex flex-col justify-center items-center">
+            <p>12</p>
+            <p>Posts</p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <p>10k</p>
+            <p>Followers</p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <p>17</p>
+            <p>Following</p>
+          </div>
+          </div>
+          <p className="text-lg mt-2 text-gray-800">{userInfo.name}</p>
+          <p className="mt-2 text-gray-500">
+          {userInfo.bio}
           </p>
-          <p className="text-lg text-center mt-2 text-gray-800">
-            {userInfo.bio}
-          </p>
-          <p className="text-xl text-center mt-2 text-gray-500">
-            {userInfo.email}
-          </p>
-          <p className="text-lg text-center mt-2 text-gray-500">
-            Followers: 1000
-          </p>
+          <hr />
+          <hr />
+          <hr />
         </div>
       </div>
     </>
