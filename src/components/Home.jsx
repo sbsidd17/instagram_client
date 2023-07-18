@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const Home = () => {
   const navigate = useNavigate();
-  const [userInfo, setUserInfo] = useState({ name: "", email: "", bio: "" });
+  const [userInfo, setUserInfo] = useState({ name: "", username:"", email: "", bio: "" });
   useEffect(() => {
     const user = async () => {
       try {
@@ -13,6 +13,7 @@ const Home = () => {
           withCredentials: true,
         });
         setUserInfo({
+          name:res.data.data.name,
           username: res.data.data.username,
           email: res.data.data.email,
           bio: res.data.data.bio,
