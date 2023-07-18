@@ -17,7 +17,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       await axios.post(
-        `${process.env.REACT_APP_BASE_URL}v1/user/login`,
+        `https://typingtest.onrender.com/v1/user/login`,
         { ...userInfo },
         {
           withCredentials: true,
