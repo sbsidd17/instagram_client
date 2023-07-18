@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const user = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}v1/user/profile`, {
+        const res = await axios.get(`https://typingtest.onrender.com/v1/user/profile`, {
           withCredentials: true,
         });
         setUserInfo({
@@ -26,7 +26,7 @@ const Home = () => {
 
   const handleLogOut = async () => {
     try {
-      await axios.get(`${process.env.REACT_APP_BASE_URL}v1/user/logout`);
+      await axios.get(`https://typingtest.onrender.com/v1/user/logout`);
       toast("Logout Successfully")
       navigate("/signin");
     } catch (error) {
