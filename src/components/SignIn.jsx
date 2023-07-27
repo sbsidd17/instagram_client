@@ -17,7 +17,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       await axios.post(
-        `https://typingtest.onrender.com/v1/user/login`,
+        `https://api-instagram-pink.vercel.app/v1/user/login`,
         { ...userInfo },
         {
           withCredentials: true,
