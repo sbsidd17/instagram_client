@@ -16,7 +16,7 @@ const SignUp = () => {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`https://typingtest.onrender.com/v1/user/signup`, { ...userInfo });
+            await axios.post(`https://api-instagram-pink.vercel.app/v1/user/signup`, { ...userInfo });
             toast("SignUp Successfully")
             navigate("/signin");
 
